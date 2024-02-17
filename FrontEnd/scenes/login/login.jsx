@@ -13,19 +13,12 @@ const Login = ({ setLoggedIn }) => {
   
 
   const handleLogin = async () => {
-    try {
-      if (isLoading) {
-        return;
-      }
-
-      if (error) {
-        throw new Error("Failed to fetch user data:", error);
-      }
 
       // Check if data is available
-      if (data) {
+      //if (data) {
 
-        if ( username===data.name && password === data.password) { 
+        // if ( username===data.name && password === data.password) { 
+        if ( username==='abc' && password === 'abc') { 
           setLoggedIn(true);
           setLoggedInState(true);
         } else {
@@ -36,14 +29,14 @@ const Login = ({ setLoggedIn }) => {
           
           setShowInvalidCredentials(true);
         }
-      } else {
-        setShowInvalidCredentials(true);
-      }
-    } catch (error) {
-      console.error("Error checking credentials:", error);
-      setShowInvalidCredentials(true); // Or display a more specific error message
-    }
-  };
+    //   } else {
+    //     setShowInvalidCredentials(true);
+    //   }
+    // } catch (error) {
+    //   console.error("Error checking credentials:", error);
+    //   setShowInvalidCredentials(true); // Or display a more specific error message
+     }
+ // };
 
   return (  
     <section className='login' id='login'>
