@@ -22,16 +22,19 @@ import {
   ReceiptLongOutlined,
   PublicOutlined,
   PointOfSaleOutlined,
+  AccountBalance,
   TodayOutlined,
   CalendarMonthOutlined,
   AdminPanelSettingsOutlined,
   TrendingUpOutlined,
   PieChartOutlined,
+  CenterFocusStrong,
 } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import FlexBetween from "./FlexBetween";
 import profileImage from "assets/profile.jpeg";
+import Logo from "assets/logo.png"
 import Battery3BarRoundedIcon from '@mui/icons-material/Battery3BarRounded';
 
 
@@ -41,70 +44,75 @@ const navItems = [
     nav: "Dashboard",
     icon: <HomeOutlined />,
   },
+  // {
+  //   text: "Containers",
+  //   nav: "Dashboard",
+  //   icon: null,
+  // },
   {
-    text: "Containers",
-    nav: "Dashboard",
-    icon: null,
-  },
-  {
-    text: "Container 1",
+    text: "Pay",
     nav: "Products",
     icon: <ShoppingCartOutlined />,
   },
   {
-    text: "Container 2",
+    text: "Invest",
     nav: "Customers",
-    icon: <Groups2Outlined />,
+    icon: <TrendingUpOutlined />,
   },
   {
-    text: "Container 3",
+    text: "Loan",
+    nav: "Monthly",
+    icon: <AccountBalance />,
+  },
+  {
+    text: "Invoice",
     nav: "Transactions",
     icon: <ReceiptLongOutlined />,
   },
+  // {
+  //   text: "Container 4",
+  //   nav: "Geography",
+  //   icon: <PublicOutlined />,
+  // },
+  // {
+  //   text: "Sales",
+  //   nav: "Sales",
+  //   icon: null,
+  // },
   {
-    text: "Container 4",
-    nav: "Geography",
-    icon: <PublicOutlined />,
-  },
-  {
-    text: "Sales",
-    nav: "Sales",
-    icon: null,
-  },
-  {
-    text: "Container 5",
+    text: "Varience",
     nav: "Overview",
     icon: <PointOfSaleOutlined />,
   },
+  // {
+  //   text: "Container 6",
+  //   nav: "Daily",
+  //   icon: <TodayOutlined />,
+  // },
+  // {
+  //   text: "Container 7",
+  //   nav: "Monthly",
+  //   icon: <CalendarMonthOutlined />,
+  // },
   {
-    text: "Container 6",
-    nav: "Daily",
-    icon: <TodayOutlined />,
-  },
-  {
-    text: "Container 7",
-    nav: "Monthly",
-    icon: <CalendarMonthOutlined />,
-  },
-  {
-    text: "Container 8",
+    text: "Portfolio",
     nav: "Breakdown",
     icon: <PieChartOutlined />,
   },
+  // {
+  //   text: "Management",
+  //   nav: "Management",
+  //   icon: null,
+  // },
   {
-    text: "Management",
-    nav: "Management",
-    icon: null,
-  },
-  {
-    text: "Container 9",
+    text: "Profile  ",
     nav: "Admin",
     icon: <AdminPanelSettingsOutlined />,
   },
   {
-    text: "Container 10",
+    text: "My Communities",
     nav: "Performance",
-    icon: <TrendingUpOutlined />,
+    icon: <Groups2Outlined />,
   },
 ];
 
@@ -143,12 +151,29 @@ const Sidebar = ({
             },
           }}
         >
+              <Box
+              
+                
+                gap="0.5rem"
+                component="img"
+                alt="profile"
+                src={Logo}
+                height="120px"
+                width="120px"
+                borderRadius="50%"
+                sx={{
+                  objectFit: "cover",
+                  marginLeft: "4rem", // Adjust this value as needed to move the image to the desired position
+                  marginTop:"3rem"
+                }}
+              />
           <Box width="100%">
-            <Box m="1.5rem 2rem 2rem 3rem">
+
+            <Box m="1.5rem 2rem 2rem 4.5rem">
               <FlexBetween color={theme.palette.secondary.main}>
                 <Box display="flex" alignItems="center" gap="0.5rem">
-                  <Typography variant="h4" fontWeight="bold">
-                    LENDEASE
+                  <Typography variant="h3" fontWeight="bold">
+                    LendEase
                   </Typography>
                 </Box>
                 {!isNonMobile && (
@@ -162,7 +187,7 @@ const Sidebar = ({
               {navItems.map(({ text,nav, icon }) => {
                 if (!icon) {
                   return (
-                    <Typography key={text} sx={{ m: "2.25rem 0 1rem 3rem" }}>
+                    <Typography variant="h1" key={text} sx={{ m: "2.25rem 0 2rem 3rem" }}>
                       {text}
                     </Typography>
                   );
@@ -209,7 +234,7 @@ const Sidebar = ({
             </List>
           </Box>
 
-          <Box position="relative" bottom="1rem">
+          {/* <Box position="relative" bottom="10rem">
             <Divider />
             <FlexBetween textTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
               <Box
@@ -243,7 +268,7 @@ const Sidebar = ({
                 }}
               />
             </FlexBetween>
-          </Box>
+          </Box> */}
         </Drawer>
       )}
     </Box>
