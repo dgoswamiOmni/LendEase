@@ -86,7 +86,7 @@ class UserDataHandler:
             await self.put_profile_picture(db, str(result.inserted_id), image_data)
 
             # Send OTP
-            await self.otp_handler.send_otp_sms(phone_number="user_phone_number", username=self.username)
+            # await self.otp_handler.send_otp_sms(phone_number="user_phone_number", username=self.username)
 
             return {"message": "Data inserted successfully", "user_id": str(result.inserted_id)}
         except Exception as e:
