@@ -20,7 +20,6 @@ app.add_middleware(
 
 mongo_instance = MongoUtils()
 mongo = mongo_instance.connect_to_database()
-community_handler = CommunityHandler(mongo)
 
 
 @app.post("/login", response_model=dict)
@@ -89,11 +88,13 @@ async def get_investment(event: dict):
 
 @app.post("/pushCommunities", response_model=dict)
 async def push_communities(event: dict):
-    return await community_handler.push_communities(event)
+    community_handler = CommunityHandler(event)
+    return await community_handler.push_communities(mongo)
 
 @app.get("/getCommunities", response_model=dict)
 async def get_communities(event: dict):
-    return await community_handler.get_communities(event)
+    community_handler = CommunityHandler(event)
+    return await community_handler.get_communities(mongo)
 
 
 if __name__ == "__main__":

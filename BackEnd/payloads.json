@@ -1,18 +1,19 @@
 [
   {
     "headers": {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZXZhcnNoaSIsImV4cCI6MTcwMzE3ODg5MiwiaWF0IjoxNzAzMDkyNDkyLCJqdGkiOiI2NWY3OTYzYi01MDllLTQ1ODEtYTVmMS00YjY0MmM1ZTkyOGUifQ.6LxyHqxZdN-I8DHQ8gNg4HvXBpRTRmnaqTvR-IETQPE"
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZXZhcnNoaSIsImV4cCI6MTcwODI5MzE1MiwiaWF0IjoxNzA4MjA2NzUyLCJqdGkiOiI5ODY0Mzg5MzE2In0.EIWUCTT47DfPBJvZxzhg669vKdujirkXPhg9IOrOBNk"
     },
     "body": {
       "collection": "user",
       "user_name": "devarshi",
       "email_id": "devarshigoswami97@gmail.com",
+      "password": "hawards5000",
       "password_hash": "$pbkdf2-sha256$29000$HAOgNMYY4zwH4FxLae09hw$tyjnZqY3euQ3Z82c9OWZLi.f51xdz4eqh0nvtGYPJ/w"
     }
   },
   {
     "headers": {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZXZhcnNoaSIsImV4cCI6MTcwMzE3ODg5MiwiaWF0IjoxNzAzMDkyNDkyLCJqdGkiOiI2NWY3OTYzYi01MDllLTQ1ODEtYTVmMS00YjY0MmM1ZTkyOGUifQ.6LxyHqxZdN-I8DHQ8gNg4HvXBpRTRmnaqTvR-IETQPE"
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZXZhcnNoaSIsImV4cCI6MTcwODI5MzE1MiwiaWF0IjoxNzA4MjA2NzUyLCJqdGkiOiI5ODY0Mzg5MzE2In0.EIWUCTT47DfPBJvZxzhg669vKdujirkXPhg9IOrOBNk"
     },
     "body": {
       "collection": "invest",
@@ -28,7 +29,7 @@
   },
   {
     "headers": {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZXZhcnNoaSIsImV4cCI6MTcwMzE3ODg5MiwiaWF0IjoxNzAzMDkyNDkyLCJqdGkiOiI2NWY3OTYzYi01MDllLTQ1ODEtYTVmMS00YjY0MmM1ZTkyOGUifQ.6LxyHqxZdN-I8DHQ8gNg4HvXBpRTRmnaqTvR-IETQPE"
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZXZhcnNoaSIsImV4cCI6MTcwODI5MzE1MiwiaWF0IjoxNzA4MjA2NzUyLCJqdGkiOiI5ODY0Mzg5MzE2In0.EIWUCTT47DfPBJvZxzhg669vKdujirkXPhg9IOrOBNk"
     },
     "body": {
       "collection": "lend",
@@ -42,7 +43,7 @@
   },
   {
     "headers": {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZXZhcnNoaSIsImV4cCI6MTcwMzE3ODg5MiwiaWF0IjoxNzAzMDkyNDkyLCJqdGkiOiI2NWY3OTYzYi01MDllLTQ1ODEtYTVmMS00YjY0MmM1ZTkyOGUifQ.6LxyHqxZdN-I8DHQ8gNg4HvXBpRTRmnaqTvR-IETQPE"
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZXZhcnNoaSIsImV4cCI6MTcwODI5MzE1MiwiaWF0IjoxNzA4MjA2NzUyLCJqdGkiOiI5ODY0Mzg5MzE2In0.EIWUCTT47DfPBJvZxzhg669vKdujirkXPhg9IOrOBNk"
     },
     "body": {
       "collection": "community",
