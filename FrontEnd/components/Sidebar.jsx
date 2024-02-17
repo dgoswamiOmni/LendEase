@@ -49,22 +49,22 @@ const navItems = [
   {
     text: "Container 1",
     nav: "Products",
-    icon: <Battery3BarRoundedIcon />,
+    icon: <ShoppingCartOutlined />,
   },
   {
     text: "Container 2",
     nav: "Customers",
-    icon: <Battery3BarRoundedIcon />,
+    icon: <Groups2Outlined />,
   },
   {
     text: "Container 3",
     nav: "Transactions",
-    icon: <Battery3BarRoundedIcon />,
+    icon: <ReceiptLongOutlined />,
   },
   {
     text: "Container 4",
     nav: "Geography",
-    icon: <Battery3BarRoundedIcon />,
+    icon: <PublicOutlined />,
   },
   {
     text: "Sales",
@@ -74,7 +74,7 @@ const navItems = [
   {
     text: "Container 5",
     nav: "Overview",
-    icon: <Battery3BarRoundedIcon />,
+    icon: <PointOfSaleOutlined />,
   },
   {
     text: "Container 6",
@@ -148,7 +148,7 @@ const Sidebar = ({
               <FlexBetween color={theme.palette.secondary.main}>
                 <Box display="flex" alignItems="center" gap="0.5rem">
                   <Typography variant="h4" fontWeight="bold">
-                    Emerald Green Power
+                    LENDEASE
                   </Typography>
                 </Box>
                 {!isNonMobile && (
@@ -233,7 +233,7 @@ const Sidebar = ({
                   fontSize="0.8rem"
                   sx={{ color: theme.palette.secondary[200] }}
                 >
-                  {user.occupation}
+                  Location
                 </Typography>
               </Box>
               <SettingsOutlined
