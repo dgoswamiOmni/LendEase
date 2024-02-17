@@ -73,7 +73,7 @@ const Dashboard = () => {
             }}
           >
             <DownloadOutlined sx={{ mr: "10px" }} />
-            Download Reports
+            Monthly Report
           </Button>
         </Box>
       </FlexBetween>
@@ -90,7 +90,7 @@ const Dashboard = () => {
       >
         {/* ROW 1 */}
         <StatBox
-          title="Total Customers"
+          title="Total Subscribers"
           value={data && data.totalCustomers}
           increase="+14%"
           description="Since last month"
@@ -121,7 +121,7 @@ const Dashboard = () => {
           <OverviewChart view="sales" isDashboard={true} />
         </Box>
         <StatBox
-          title="Monthly Sales"
+          title="Total Funds"
           value={data && data.thisMonthStats.totalSales}
           increase="+5%"
           description="Since last month"
