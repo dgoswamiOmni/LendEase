@@ -1,0 +1,33 @@
+[
+  {
+  "collection": "user",
+  "user_name": "devarshi",
+  "email_id": "devarshigoswami97@gmail.com",
+  "password_hash": "$pbkdf2-sha256$29000$HAOgNMYY4zwH4FxLae09hw$tyjnZqY3euQ3Z82c9OWZLi.f51xdz4eqh0nvtGYPJ/w"
+},
+{
+  "collection": "invest",
+  "user_name": "devarshi",
+  "amount": "5000",
+  "interest_accrual": "",
+  "auto_payment_flag": "",
+  "expected_returns": "",
+  "investment_plan": "",
+  "password_hash": "$pbkdf2-sha256$29000$HAOgNMYY4zwH4FxLae09hw$tyjnZqY3euQ3Z82c9OWZLi.f51xdz4eqh0nvtGYPJ/w"
+},
+{
+  "user_name": "lend",
+  "loan_category": "",
+  "repayment_schedule": "",
+  "document_url": "",
+  "interest_rate": "",
+  "password_hash": "$pbkdf2-sha256$29000$HAOgNMYY4zwH4FxLae09hw$tyjnZqY3euQ3Z82c9OWZLi.f51xdz4eqh0nvtGYPJ/w"
+},
+{
+  "user_name": "community",
+  "community_id": "",
+  "total_pool": "",
+  "geo_tag": "",
+  "password_hash": "$pbkdf2-sha256$29000$HAOgNMYY4zwH4FxLae09hw$tyjnZqY3euQ3Z82c9OWZLi.f51xdz4eqh0nvtGYPJ/w"
+}
+]

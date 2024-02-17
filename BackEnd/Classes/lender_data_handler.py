@@ -3,7 +3,7 @@ from passlib.hash import pbkdf2_sha256
 from Utils.auth_utils import generate_jwt_token, log_login, log_logout, validate_jwt_token
 from fastapi import HTTPException
 
-class UserDataHandler:
+class LenderDataHandler:
     def __init__(self, username, password, email):
         self.username = username
         self.password = password

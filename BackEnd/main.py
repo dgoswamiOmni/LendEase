@@ -34,9 +34,9 @@ async def logout_user(username: str, token: str):
 
 
 @app.post("/putUserData", response_model=dict)
-async def put_user_data(username: str, email: str, password: str, image_data: bytes):
+async def put_user_data(username: str, email: str, password: str):
     user_handler = UserDataHandler(username=username, password=password, email=email)
-    return await user_handler.put_user_data(mongo, image_data)
+    return await user_handler.put_user_data(mongo)
 
 
 @app.get("/getUserData", response_model=dict)
@@ -47,6 +47,24 @@ async def get_user_data(username: str):
     except HTTPException as e:
         # If it's an HTTPException, return a detailed error response
         return {"statusCode": e.status_code, "error": str(e.detail)}
+
+
+@app.post("/putLoan", response_model=dict)
+async def put_loan():
+    pass
+
+@app.get("/getLoan", response_model=dict)
+async def get_loans():
+    pass
+
+@app.post("/putInvestment", response_model=dict)
+async def get_loan():
+
+@app.get("/getInvestments", response_model=dict)
+async def get_investors():
+    pass
+
+
 
 if __name__ == "__main__":
     import uvicorn
