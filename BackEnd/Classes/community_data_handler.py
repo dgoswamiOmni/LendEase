@@ -2,6 +2,9 @@ import json
 from fastapi import HTTPException
 from Utils.auth_utils import validate_jwt_token
 from Utils.mongo_utils import MongoUtils
+import uuid
+from Utils.geolocation_utils import get_user_location
+
 
 
 class CommunityHandler:
@@ -11,12 +14,31 @@ class CommunityHandler:
         self.body = self.event.get('body', {})
         # Extract token for authentication
         self.token = self.headers.get('Authorization', '').split('Bearer ')[-1]
+        self.user_ip_address = "8.8.8.8"  # Replace with the actual user's IP address
+        self.user_location = get_user_location(self.user_ip_address)
 
     async def push_communities(self, db):
         try:
+            # Extract fields from the payload
+            collection = self.body.get("collection", "")
+            community_id = str(uuid.uuid4())
+            total_pool = self.body.get("total_pool", "")
+            geo_tag = self.user_location
+            users = self.body.get("users", [])
+            password_hash = self.body.get("password_hash", "")
 
-            result = await db.communities.insert_one(self.body)
+            # Construct the community data
+            community_data = {
+                "collection": collection,
+                "community_id": community_id,
+                "total_pool": total_pool,
+                "geo_tag": geo_tag,
+                "users": users,
+                "password_hash": password_hash,
+            }
 
+            # Insert new community data into MongoDB
+            result = await db.communities.insert_one(community_data)
             return {"message": "Communities data inserted successfully", "community_id": str(result.inserted_id)}
 
         except Exception as e:
