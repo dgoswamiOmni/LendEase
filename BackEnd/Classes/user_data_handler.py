@@ -4,11 +4,14 @@ from Utils.auth_utils import generate_jwt_token, log_login, log_logout, validate
 from fastapi import HTTPException
 
 class UserDataHandler:
-    def __init__(self, username, password, email):
-        self.username = username
-        self.password = password
-        self.email = email
-
+    def __init__(self, event):
+        self.event = event
+        self.headers = self.event.get('headers', {})
+        self.body = self.event.get('body', {})
+        self.username = self.body.get('user_name', '')
+        self.password = self.body.get('password', '')
+        self.email = self.body.get('email', '')
+        self.token = self.event.get('headers', {}).get('Authorization', '').split('Bearer ')[-1]
 
     async def authenticate_user(self, db):
         try:
@@ -40,10 +43,10 @@ class UserDataHandler:
             print(f"Exception in authenticate_user: {str(e)}")
             return {'statusCode': 500, 'body': json.dumps({'message': 'Internal Server Error'})}
 
-    async def logout_user(self, db, token):
+    async def logout_user(self, db):
         try:
             # Validate the JWT token
-            decoded_token = validate_jwt_token(token)
+            decoded_token = validate_jwt_token(self.token)
 
             if decoded_token and decoded_token['sub'] == self.username:
                 # Search for the user's session record
