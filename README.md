@@ -1,0 +1,1 @@
+**LendEase** - a community-based lending platform is built as part of a 24-hour hackathon - *Hack South West 2024*. We as a team secured a first place in the hackathon, details can be found on Devpost - https://devpost.com/software/lendease-obmgr0
